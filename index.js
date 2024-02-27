@@ -14,8 +14,13 @@ mongoose
   .then(() => console.log("MongoDB connected"));
 console.log("MongoDB connected");
 
+// daily challenge model
 const dailyChallengeRoute = require("./routes/daily-challenge-route");
 app.use("/", dailyChallengeRoute);
+
+// daily challenge user model
+const dailyChallengeUserRoute = require("./routes/daily-challenge-user-route");
+app.use("/", dailyChallengeUserRoute);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
